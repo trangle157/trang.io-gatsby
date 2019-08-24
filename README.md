@@ -1,2 +1,2 @@
-# webtemplate-no1
-web template for designers
+# Trang's website :) 
+This is where my art resides. 
