@@ -4,9 +4,24 @@
 	left: 25%;
 }
 
+#balloons {
+	bottom: 0px;
+	right: 0px;
+	position: absolute;
+}
+
 .head {
 	font-family: 'Lato', sans-serif;
 	color: grey;
+}
+
+.title {
+	font-family: 'Lato', sans-serif;
+	color: grey;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	right: 500px;
 }
 
 .quote {
@@ -77,6 +92,4 @@
 	top: 0px;
 	left: 200px;
 }
-
-
 
