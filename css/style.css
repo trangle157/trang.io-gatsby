@@ -24,6 +24,15 @@
 	right: 500px;
 }
 
+.title2 {
+	font-family: 'Lato', sans-serif;
+	color: grey;
+	position: absolute;
+	top: 50px;
+	left: 100px;
+	right: 500px;
+}
+
 .quote {
 	font-family: 'Dancing Script', cursive;
 	color: grey;
@@ -32,6 +41,7 @@
 	position: absolute;
 	font-size: 60px;
 }
+
 
 /*try to create a heart with css, can't pulse */
 .heart {
@@ -58,7 +68,7 @@
 
 
 .heart:hover {
-	animation-play-state: infinite;
+	animation-play-state: running;
 	opacity: 0.5;
 }
 
