@@ -1,2 +1,1 @@
-# trangcat.github.io
-Trang's first website
+# Trang's first website
