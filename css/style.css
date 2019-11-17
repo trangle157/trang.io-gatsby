@@ -103,3 +103,8 @@
 	left: 200px;
 }
 
+.art-container {
+	display: flex
+	align-content: stretch + safe;
+}
+
