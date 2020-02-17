@@ -1,20 +1,4 @@
-#home {
-	position: absolute;
-	top: 60px;
-	left: 70px;
-}
 
-#heart {
-	position: absolute;
-	top: 10px;
-	left: 25%;
-}
-
-#balloons {
-	bottom: 0px;
-	right: 0px;
-	position: absolute;
-}
 
 .head {
 	font-family: 'Lato', sans-serif;
@@ -40,6 +24,20 @@
 	font-size: extra-large
 }
 
+.art-container {
+	display: flex
+	align-content: stretch + safe;
+}
+
+.text {
+	top: 10px;
+	position: absolute;
+}
+
+.image {
+	display: block;
+	width: 100%;
+}
 .title3 {
 	font-family: 'Lato', sans-serif;
 	color: grey;
@@ -56,7 +54,18 @@
 }
 
 
-/*try to create a heart with css, can't pulse */
+/*
+#heart {
+	position: absolute;
+	top: 10px;
+	left: 25%;
+}
+
+#balloons {
+	bottom: 0px;
+	right: 0px;
+	position: absolute;
+}
 .heart {
 	content: "It's all about your heart";
 	background-color: pink;
@@ -70,7 +79,6 @@
 	transform: rotate(-45deg);
 	animation-duration: 3s;
   	animation-delay: 2s;
-  	/*animation-iteration-count: infinite;*/
 }
 
 @keyframes pulse {
@@ -114,23 +122,4 @@
 .heart:after {
 	top: 0px;
 	left: 200px;
-}
-
-.art-container {
-	display: flex
-	align-content: stretch + safe;
-}
-
-.text {
-	top: 10px;
-	position: absolute;
-}
-
-.container {
-	position: relative;
-	padding-left: 0px;
-}
-
-#bimg {
-	opacity: 80%;
-}
+} */
