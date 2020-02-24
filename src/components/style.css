@@ -25,7 +25,7 @@
 }
 
 .art-container {
-	display: flex
+	display: flex;
 	align-content: stretch + safe;
 }
 
