@@ -41,5 +41,8 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "scripts": {
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   }
 }
