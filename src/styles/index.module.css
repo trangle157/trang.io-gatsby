@@ -1,0 +1,19 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	overflow-x: hidden;
+}
+
+img {
+	width: 200%;
+	position: absolute;
+	bottom: 0%;
+	right: -250px;
+}
+
+h1 {
+	position: absolute;
+	top: 54px;
+}

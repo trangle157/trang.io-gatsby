@@ -1,0 +1,26 @@
+{
+  "name": "trang.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trangreyle/trang.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trangreyle/trang.io/issues"
+  },
+  "homepage": "https://github.com/trangreyle/trang.io#readme",
+  "dependencies": {
+    "gatsby": "^2.24.9",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
