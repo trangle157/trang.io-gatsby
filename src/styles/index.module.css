@@ -1,19 +1,154 @@
 .container {
 	display: flex;
-	flex-direction: column;
-	text-align: center;
-	align-items: center;
-	overflow-x: hidden;
-}
+	flex-direction: column-reverse;
+	width: 100vw;
+	height: 100vh;
 
-img {
-	width: 200%;
-	position: absolute;
-	bottom: 0%;
-	right: -250px;
 }
 
 h1 {
-	position: absolute;
-	top: 54px;
+	font-size: 29px;
+	text-align: center;
+}
+
+.introText {
+	padding-bottom: 13px;
+}
+
+.coverPhoto {
+	top: 3vh;
+}
+
+.topChunk {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.socialMediaBar {
+	width: 60%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.icon {
+	width: 38px;
+}
+
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+	.container {
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		text-align: left;
+	}
+
+	.coverPhoto {
+		top: 0vh;
+	}
+
+	h1 {
+		font-size: 40px;
+		text-align: left;
+	}
+
+	.topChunk {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		top: 5vh;
+		left: 5vh;
+		align-items: flex-start;
+	}
+
+	.socialMediaBar {
+		position: relative;
+	}
+
+	.icon {
+		width: 4vh;
+	}
+}
+
+@media all and (min-width: 1440px) {
+	.container {
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		text-align: left;
+	}
+
+	.coverPhoto {
+		top: 0vh;
+	}
+
+	h1 {
+		font-size: 50px;
+		text-align: left;
+	}
+
+	.topChunk {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		top: 9vh;
+		left: 9vh;
+		align-items: flex-start;
+	}
+
+	.socialMediaBar {
+		position: relative;
+	}
+
+	.icon {
+		width: 6vh;
+	}
+}
+
+@media all and (min-width: 991px) and (max-width: 1023px) {
+	.container {
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		text-align: left;
+	}
+
+	h1 {
+		font-size: 30px;
+	}
+
+	.topChunk {
+		top: 30px;
+		left: 30px;
+	}
+}
+
+@media all and (min-width: 601px) and (max-width: 991px) {
+	.container {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	.coverPhoto {
+		top: 0vh;
+	}
+
+	h1 {
+		font-size: 38px;
+	}
+
+	.icon {
+		width: 44.53px;
+	}
+
+	.topChunk {
+		position: relative;
+		top: -30px;
+	}
+
+	.socialMediaBar {
+		width: 40%;
+	}
 }

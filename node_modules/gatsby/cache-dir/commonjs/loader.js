@@ -3,6 +3,7 @@
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 exports.__esModule = true;
+exports.getStaticQueryResults = getStaticQueryResults;
 exports.default = exports.publicLoader = exports.setLoader = exports.ProdLoader = exports.BaseLoader = exports.PageResourceStatus = void 0;
 
 var _prefetch = _interopRequireDefault(require("./prefetch"));
@@ -104,7 +105,7 @@ class BaseLoader {
     // }
     this.pageDb = new Map();
     this.inFlightDb = new Map();
-    this.staticQueryDb = new Map();
+    this.staticQueryDb = {};
     this.pageDataDb = new Map();
     this.prefetchTriggered = new Set();
     this.prefetchCompleted = new Set();
@@ -205,7 +206,11 @@ class BaseLoader {
     const pagePath = (0, _findPath.findPath)(rawPath);
 
     if (this.pageDataDb.has(pagePath)) {
-      return Promise.resolve(this.pageDataDb.get(pagePath));
+      const pageData = this.pageDataDb.get(pagePath);
+
+      if (process.env.BUILD_STAGE !== `develop` || !pageData.stale) {
+        return Promise.resolve(pageData);
+      }
     }
 
     return this.fetchPageDataJson({
@@ -226,7 +231,10 @@ class BaseLoader {
 
     if (this.pageDb.has(pagePath)) {
       const page = this.pageDb.get(pagePath);
-      return Promise.resolve(page.payload);
+
+      if (process.env.BUILD_STAGE !== `develop` || !page.payload.stale) {
+        return Promise.resolve(page.payload);
+      }
     }
 
     if (this.inFlightDb.has(pagePath)) {
@@ -272,15 +280,15 @@ class BaseLoader {
       });
       const staticQueryBatchPromise = Promise.all(staticQueryHashes.map(staticQueryHash => {
         // Check for cache in case this static query result has already been loaded
-        if (this.staticQueryDb.has(staticQueryHash)) {
-          const jsonPayload = this.staticQueryDb.get(staticQueryHash);
+        if (this.staticQueryDb[staticQueryHash]) {
+          const jsonPayload = this.staticQueryDb[staticQueryHash];
           return {
             staticQueryHash,
             jsonPayload
           };
         }
 
-        return this.memoizedGet(`${__PATH_PREFIX__}/static/d/${staticQueryHash}.json`).then(req => {
+        return this.memoizedGet(`${__PATH_PREFIX__}/page-data/sq/d/${staticQueryHash}.json`).then(req => {
           const jsonPayload = JSON.parse(req.responseText);
           return {
             staticQueryHash,
@@ -294,7 +302,7 @@ class BaseLoader {
           jsonPayload
         }) => {
           staticQueryResultsMap[staticQueryHash] = jsonPayload;
-          this.staticQueryDb.set(staticQueryHash, jsonPayload);
+          this.staticQueryDb[staticQueryHash] = jsonPayload;
         });
         return staticQueryResultsMap;
       });
@@ -387,7 +395,13 @@ class BaseLoader {
   }
 
   doPrefetch(pagePath) {
-    throw new Error(`doPrefetch not implemented`);
+    const pageDataUrl = createPageDataUrl(pagePath);
+    return (0, _prefetch.default)(pageDataUrl, {
+      crossOrigin: `anonymous`,
+      as: `fetch`
+    }).then(() => // This was just prefetched, so will return a response from
+    // the cache instead of making another request to the server
+    this.loadPageDataJson(pagePath));
   }
 
   hovering(rawPath) {
@@ -409,7 +423,7 @@ class BaseLoader {
   isPageNotFound(rawPath) {
     const pagePath = (0, _findPath.findPath)(rawPath);
     const page = this.pageDb.get(pagePath);
-    return page && page.notFound === true;
+    return !page || page.notFound;
   }
 
   loadAppData(retries = 0) {
@@ -458,13 +472,7 @@ class ProdLoader extends BaseLoader {
   }
 
   doPrefetch(pagePath) {
-    const pageDataUrl = createPageDataUrl(pagePath);
-    return (0, _prefetch.default)(pageDataUrl, {
-      crossOrigin: `anonymous`,
-      as: `fetch`
-    }).then(() => // This was just prefetched, so will return a response from
-    // the cache instead of making another request to the server
-    this.loadPageDataJson(pagePath)).then(result => {
+    return super.doPrefetch(pagePath).then(result => {
       if (result.status !== PageResourceStatus.Success) {
         return Promise.resolve();
       }
@@ -536,3 +544,11 @@ const publicLoader = {
 exports.publicLoader = publicLoader;
 var _default = publicLoader;
 exports.default = _default;
+
+function getStaticQueryResults() {
+  if (instance) {
+    return instance.staticQueryDb;
+  } else {
+    return {};
+  }
+}

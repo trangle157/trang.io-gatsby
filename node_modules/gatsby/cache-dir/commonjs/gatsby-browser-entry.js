@@ -36,7 +36,7 @@ var _loader = _interopRequireDefault(require("./loader"));
 const prefetchPathname = _loader.default.enqueue;
 exports.prefetchPathname = prefetchPathname;
 
-const StaticQueryContext = _react.default.createContext({});
+const StaticQueryContext = /*#__PURE__*/_react.default.createContext({});
 
 exports.StaticQueryContext = StaticQueryContext;
 
@@ -88,7 +88,7 @@ useStaticQuery(graphql\`${query}\`);
 `);
   }
 
-  if (context === null || context === void 0 ? void 0 : (_context$query = context[query]) === null || _context$query === void 0 ? void 0 : _context$query.data) {
+  if ((_context$query = context[query]) === null || _context$query === void 0 ? void 0 : _context$query.data) {
     return context[query].data;
   } else {
     throw new Error(`The result of this StaticQuery could not be fetched.\n\n` + `This is likely a bug in Gatsby and if refreshing the page does not fix it, ` + `please open an issue in https://github.com/gatsbyjs/gatsby/issues`);

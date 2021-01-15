@@ -64,7 +64,7 @@ window.___loader = _loader.publicLoader;
     }
   }, /*#__PURE__*/_react.default.createElement(_pageRenderer.default, props));
 
-  const DataContext = _react.default.createContext({});
+  const DataContext = /*#__PURE__*/_react.default.createContext({});
 
   class GatsbyRoot extends _react.default.Component {
     render() {
@@ -78,14 +78,17 @@ window.___loader = _loader.publicLoader;
       }, ({
         pageResources,
         location
-      }) => /*#__PURE__*/_react.default.createElement(_gatsby.StaticQueryContext.Provider, {
-        value: pageResources.staticQueryResults
-      }, /*#__PURE__*/_react.default.createElement(DataContext.Provider, {
-        value: {
-          pageResources,
-          location
-        }
-      }, children))));
+      }) => {
+        const staticQueryResults = (0, _loader.getStaticQueryResults)();
+        return /*#__PURE__*/_react.default.createElement(_gatsby.StaticQueryContext.Provider, {
+          value: staticQueryResults
+        }, /*#__PURE__*/_react.default.createElement(DataContext.Provider, {
+          value: {
+            pageResources,
+            location
+          }
+        }, children));
+      }));
     }
 
   }
