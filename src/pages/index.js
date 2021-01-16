@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Link } from "gatsby"
 import Img from "gatsby-image/withIEPolyfill"
 import styles from "../styles/index.module.css"
 import Layout from "../components/layout"
@@ -60,16 +61,21 @@ export default ({ data }) => {
 		      	object-fit = "none"
 		      	alt="A drawing of a girl"/>
 		    <div className = {styles.topChunk}>
-				<h1 className={styles.introText}>
-				  	This is Trang.<br/>I bring art to heal the world.
-			    </h1>
-			    <div className={styles.socialMediaBar}>
-				    <img className={styles.icon} src="assets/imgs/icons/dribbble.svg"/>
-					<img className={styles.icon} src="assets/imgs/icons/linkedin.svg"/>
-					<img className={styles.icon} src="assets/imgs/icons/github.svg"/>
-					<img className={styles.icon} src="assets/imgs/icons/email.svg"/>
-			    </div>
-			</div>
+    			<h1 className={styles.introText}>
+    			  	This is Trang.<br/>I bring art to heal the world.
+    		  </h1>
+  		    <div className={styles.socialMediaBar}>
+  			    <img className={styles.icon} src="assets/imgs/icons/dribbble.svg"/>
+    				<img className={styles.icon} src="assets/imgs/icons/linkedin.svg"/>
+    				<img className={styles.icon} src="assets/imgs/icons/github.svg"/>
+    				<img className={styles.icon} src="assets/imgs/icons/email.svg"/>
+  		    </div>
+          <div className={styles.pages}>
+            <h2>About</h2>
+            <h2>Projects</h2>
+            <h2>Resume</h2>
+          </div>
+			  </div>
 	    </div>
     </Layout>
   )

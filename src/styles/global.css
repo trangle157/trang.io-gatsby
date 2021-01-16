@@ -4,6 +4,12 @@ h1 {
 	font-style: normal;
 }
 
+h2 {
+	font-family: bilo, sans-serif;
+	font-weight: 300;
+	font-style: normal;
+}
+
 @media all and (max-width: 768px) {
 	h1 {
 		text-align: center;

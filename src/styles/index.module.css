@@ -2,8 +2,6 @@
 	display: flex;
 	flex-direction: column-reverse;
 	width: 100vw;
-	height: 100vh;
-
 }
 
 h1 {
@@ -16,7 +14,7 @@ h1 {
 }
 
 .coverPhoto {
-	top: 3vh;
+	top: -4vh;
 }
 
 .topChunk {
@@ -35,6 +33,18 @@ h1 {
 
 .icon {
 	width: 38px;
+}
+
+.pages {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 80%;
+	margin-top: 10px;
+}
+
+h2 {
+	font-size: 22px;
 }
 
 @media all and (min-width: 1024px) and (max-width: 1439px) {
@@ -89,6 +99,10 @@ h1 {
 		text-align: left;
 	}
 
+	h2 {
+		font-size: 30px;
+	}
+	
 	.topChunk {
 		position: absolute;
 		display: flex;
@@ -150,5 +164,9 @@ h1 {
 
 	.socialMediaBar {
 		width: 40%;
+	}
+
+	.pages {
+		width: 50%;
 	}
 }
