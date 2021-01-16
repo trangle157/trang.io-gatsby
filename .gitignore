@@ -5,3 +5,7 @@ package-lock.json
 .cache/
 
 node_modules/
+
+public/
+
+.DS_Store
