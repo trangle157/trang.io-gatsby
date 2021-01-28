@@ -11,3 +11,4 @@ export default function Projects() {
 		<h1>Whatduppppp</h1>
 	)
 }
+

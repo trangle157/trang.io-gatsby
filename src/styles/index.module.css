@@ -6,6 +6,36 @@
 	overflow-y: scroll;
 }
 
+.initials {
+	font-family: 'Metropolis-Bold', sans-serif;
+	position: absolute;
+	left: 30px;
+	text-decoration: none;
+	color: black;
+}
+
+.initials:visited {
+	color: black;
+}
+
+
+.header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	justify-content: center;
+}
+
+.pages {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 50%;
+	margin-top: 0px;
+	align-self: center;
+}
+
 h1 {
 	font-size: 29px;
 	text-align: center;
@@ -38,17 +68,23 @@ h1 {
 	width: 38px;
 }
 
-.pages {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 80%;
-	margin-top: 10px;
+h2 {
+	font-size: 15px;
 }
 
-h2 {
-	font-size: 18px;
+.linkStyle {
+	text-decoration: none;
+	color: black;
 }
+
+.linkStyle:visited {
+	color: black;
+}
+
+.linkStyle:hover {
+	color: #9E71B2;
+}
+
 
 @media all and (min-width: 1024px) and (max-width: 1439px) {
 	.container {
@@ -62,13 +98,27 @@ h2 {
 		top: 0vh;
 	}
 
+	.initials {
+		font-size: 20px;
+		left: 0vh;
+	}
+
+	.header {
+		width: 80vh;
+	}
+
+	.pages {
+		width: 100%;
+		margin-left: 20vh;
+	}
+
 	h1 {
 		font-size: 40px;
 		text-align: left;
 	}
 
 	h2 {
-		font-size: 30px;
+		font-size: 25px;
 	}
 
 	.topChunk {
@@ -102,13 +152,27 @@ h2 {
 		top: 0vh;
 	}
 
+	.initials {
+		font-size: 30px;
+		left: 0vh;
+	}
+
+	.header {
+		width: 80vh;
+	}
+
+	.pages {
+		width: 100%;
+		margin-left: 20vh;
+	}
+
 	h1 {
 		font-size: 50px;
 		text-align: left;
 	}
 
 	h2 {
-		font-size: 30px;
+		font-size: 28px;
 	}
 	
 	.topChunk {

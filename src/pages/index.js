@@ -3,6 +3,8 @@ import { graphql } from "gatsby"
 import { Link } from "gatsby"
 import Img from "gatsby-image/withIEPolyfill"
 import styles from "../styles/index.module.css"
+import styled from "@emotion/styled"
+import { css } from "@emotion/react"
 import Layout from "../components/layout"
 
 export const query = graphql`
@@ -61,6 +63,14 @@ export default ({ data }) => {
 		      	object-fit = "none"
 		      	alt="A drawing of a girl"/>
 		    <div className = {styles.topChunk}>
+          <div className={styles.header}>
+            <div className={styles.initials}><Link to="/" className={styles.linkStyle}>TRL</Link></div>
+            <div className={styles.pages}>
+              <h2><Link to="/about" className={styles.linkStyle}>About</Link></h2>
+              <h2><Link to="/projects" className={styles.linkStyle}>Projects</Link></h2>
+              <h2><Link to="/resume" className={styles.linkStyle}>Resume</Link></h2>
+            </div>
+          </div>
     			<h1 className={styles.introText}>
     			  	This is Trang.<br/>I bring art to heal the world.
     		  </h1>
@@ -70,12 +80,7 @@ export default ({ data }) => {
     				<img className={styles.icon} src="assets/imgs/icons/github.svg"/>
     				<img className={styles.icon} src="assets/imgs/icons/email.svg"/>
   		    </div>
-          <div className={styles.pages}>
-            <h2>About</h2>
-            <h2>Projects</h2>
-            <h2>Resume</h2>
-          </div>
-			  </div>
+        </div>
 	    </div>
     </Layout>
   )
