@@ -5,8 +5,8 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image/withIEPolyfill"
 import { Link } from "gatsby"
 
-export default function About() {
+export default ({data}) => {
 	return (
-		<h1>About</h1>
+		<h1>Yo dawg</h1>
 	)
 }

@@ -1,0 +1,72 @@
+.header {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	justify-content: center;
+}
+
+.initials {
+	font-family: 'Metropolis-Bold', sans-serif;
+	position: absolute;
+	left: 30px;
+	text-decoration: none;
+	color: black;
+}
+
+.initials:visited {
+	color: black;
+}
+
+.pages {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 50%;
+	margin-top: 0px;
+	align-self: center;
+}
+
+.linkStyle {
+	text-decoration: none;
+	color: black;
+}
+
+.linkStyle:visited {
+	color: black;
+}
+
+.linkStyle:hover {
+	color: #9E71B2;
+}
+
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+	.header {
+		width: 100vh;
+		left: 5vh;
+	}
+
+	.initials {
+		font-size: 20px;
+		left: 0vh;
+	}
+}
+
+@media all and (min-width: 1440px) {
+	.header {
+		width: 80vh;
+		left: 9vh;
+	}
+
+	.initials {
+		font-size: 30px;
+		left: 0vh;
+	}
+}
+
+@media all and (min-width: 991px) and (max-width: 1023px) {
+	.header {
+		left: 30px;
+	}
+}

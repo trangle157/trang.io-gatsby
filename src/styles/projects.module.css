@@ -1,0 +1,23 @@
+.projects {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+}
+
+.bottomGap {
+	height: 10vh;
+}
+
+.linkStyle {
+	text-decoration: none;
+	color: black;
+}
+
+.linkStyle:visited {
+	color: black;
+}
+
+.linkStyle:hover {
+	color: #9E71B2;
+}
