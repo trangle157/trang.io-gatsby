@@ -4,17 +4,32 @@
 }
 
 h1 {
-	font-family: bilo, sans-serif;
+	font-family: bilo-medium, sans-serif;
 	font-weight: 200;
 	font-style: normal;
 }
 
 h2 {
-	font-family: bilo, sans-serif;
+	font-family: bilo-medium, sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 16px;
+	margin-left: 8px;
+}
+
+h3 {
+	font-family: bilo-medium, sans-serif;
 	font-weight: 300;
 	font-style: normal;
 	font-size: 15px;
+	margin-left: 8px;
 }
+
+body {
+	font-family: bilo, sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 15px;}
 
 @media all and (max-width: 768px) {
 	h1 {
@@ -26,17 +41,29 @@ h2 {
 	h2 {
 		font-size: 22px;
 	}
+
+	body {
+		font-size: 20px;
+	}
 }
 
 @media all and (min-width: 1024px) and (max-width: 1439px) {
 	h2 {
 		font-size: 25px;
 	}
+
+	body {
+		font-size: 23px;
+	}
 }
 
 @media all and (min-width: 1440px) {
 	h2 {
 		font-size: 28px;
-	}	
+	}
+
+	body {
+		font-size: 20px;
+	}
 }
 	

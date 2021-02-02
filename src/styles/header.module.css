@@ -13,6 +13,7 @@
 	left: 30px;
 	text-decoration: none;
 	color: black;
+	line-height: auto;
 }
 
 .initials:visited {
@@ -41,14 +42,24 @@
 	color: #9E71B2;
 }
 
-@media all and (min-width: 1024px) and (max-width: 1439px) {
+@media all and (min-width: 991px) and (max-width: 1023px) {
 	.header {
-		width: 100vh;
-		left: 5vh;
+		left: 30px;
 	}
 
 	.initials {
-		font-size: 20px;
+		left: 0px;
+	}
+}
+
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+	.header {
+		width: 100vh;
+		left: 2.5vh;
+	}
+
+	.initials {
+		font-size: 23px;
 		left: 0vh;
 	}
 }
@@ -56,17 +67,11 @@
 @media all and (min-width: 1440px) {
 	.header {
 		width: 80vh;
-		left: 9vh;
+		left: 2.5vh;
 	}
 
 	.initials {
-		font-size: 30px;
+		font-size: 23px;
 		left: 0vh;
-	}
-}
-
-@media all and (min-width: 991px) and (max-width: 1023px) {
-	.header {
-		left: 30px;
 	}
 }

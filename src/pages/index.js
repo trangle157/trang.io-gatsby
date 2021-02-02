@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { Link } from "gatsby"
 import Img from "gatsby-image/withIEPolyfill"
 import styles from "../styles/index.module.css"
+import "../styles/global.css"
 import Layout from "../components/layout"
 
 export const query = graphql`

@@ -137,7 +137,7 @@ export default ({data}) => {
 		      	alt="A heatmap or matrix of CPU and GPU brand names"/>
 		      				<div className={styles.bottomGap}></div>
 			<div className={styles.projects}>
-				<h1>Drawing App for the Disabled</h1>
+				<h1><Link to="/winged" className={styles.linkStyle}>Drawing App for the Disabled</Link></h1>
 			</div>
 			<Img 
 		      	fluid={sourcesWinged}
@@ -146,7 +146,7 @@ export default ({data}) => {
 		      	alt="A screen of a desktop app"/>
 		      				<div className={styles.bottomGap}></div>
 			<div className={styles.projects}>
-				<h1>Watercolor Simulation Drawing App in GLSL and Processing</h1>
+				<h1>Watercolor Simulation Drawing App</h1>
 			</div>
 			<Img 
 		      	fluid={sourcesArt}
