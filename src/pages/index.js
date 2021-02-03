@@ -5,63 +5,17 @@ import Img from "gatsby-image/withIEPolyfill"
 import styles from "../styles/index.module.css"
 import "../styles/global.css"
 import Layout from "../components/layout"
-
-export const query = graphql`
-  query {
-    mobileImage: file(relativePath: { eq: "cover-mobile.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    tabletImage: file(relativePath: { eq: "cover-tablet.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 2000, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    desktopImage: file(
-      relativePath: { eq: "cover.png" }
-    ) {
-      childImageSharp {
-        fluid(maxWidth: 2000, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
+import Image from "../components/image.js"
 
 //why is it export default data here
 //ah nvm maybe sth to do with the API
 export default ({ data }) => {
-  // Set up the array of image data and `media` keys.
-  // You can have as many entries as you'd like.
-  const sources = [
-    {
-      ...data.mobileImage.childImageSharp.fluid,
-      media: `(max-width: 600px)`
-    },
-    {
-      ...data.tabletImage.childImageSharp.fluid,
-      media: `(max-width: 991px)`
-    },
-    {
-      ...data.desktopImage.childImageSharp.fluid,
-      media: `(min-width: 992px)`,
-    },
-  ]
-
   return (
     <Layout>
 	    <div className = {styles.container}>
-		    <Img 
+		    <Image 
 		    	className = {styles.coverPhoto}
-		      	fluid={sources}
-		      	style={{"position": "relative"}}
-		      	object-fit = "none"
+		      	fileName="cover.png"
 		      	alt="A drawing of a girl"/>
 		    <div className = {styles.topChunk}>
     			<h1 className={styles.introText}>

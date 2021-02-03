@@ -1,3 +1,10 @@
 figure {
 	width: 90vw;
+	align-self: center;
+}
+
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+	figure {
+		width: 50vw;
+	}
 }

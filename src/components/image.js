@@ -8,7 +8,7 @@ const Image = ({ fileName, alt, style }) => {
     query {
       allImageSharp {
         nodes {
-          fluid(maxWidth: 2000, quality: 100) {
+          fluid(maxWidth: 1600, quality: 100) {
             originalName
             ...GatsbyImageSharpFluid_withWebp
           }

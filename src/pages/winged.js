@@ -7,6 +7,8 @@ export default ({data}) => {
 	return (
 		<Layout>
 			<div className={styles.container}>
+				<h1>Project Summary</h1>
+				<ul>Solo project</ul>
 				<h1>Problem statement</h1>
 				<body>Disabilities have long brought about bad effects to adults emotionally and physically</body>
 				<body>There are a lot of disabled artists out there who want to be able to draw. However, most of them use other parts of their bodies (such as their mouths and legs), which will greatly cause pain and discomfort.</body>
