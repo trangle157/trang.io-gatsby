@@ -14,8 +14,8 @@ export default ({ data }) => {
     <Layout>
 	    <div className = {styles.container}>
 		    <Image 
-		    	className = {styles.coverPhoto}
 		      	fileName="cover.png"
+            style={{width : "100vw"}}
 		      	alt="A drawing of a girl"/>
 		    <div className = {styles.topChunk}>
     			<h1 className={styles.introText}>
