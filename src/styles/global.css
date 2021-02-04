@@ -58,6 +58,10 @@ a:hover {
 	h1 {
 		text-align: center;
 	}
+
+	h2 {
+		text-align: center;
+	}
 }
 
 @media all and (min-width: 769px) and (max-width: 1023px) {
