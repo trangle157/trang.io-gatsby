@@ -6,7 +6,7 @@
 }
 
 /*cut out for desktop*/
-@media all and (min-width: 992px) {
+@media all and (min-width: 1440px) {
 	.container {
 		flex-direction: row;
 		align-items: flex-start;
