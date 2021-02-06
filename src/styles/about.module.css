@@ -1,0 +1,14 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	padding: 0 2.5vh 4vh 2.5vh;
+	align-items: center;
+}
+
+/*cut out for desktop*/
+@media all and (min-width: 992px) {
+	.container {
+		flex-direction: row;
+		align-items: flex-start;
+	}
+}
