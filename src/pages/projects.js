@@ -24,7 +24,7 @@ export default ({data}) => {
 		      	alt="A screen of a desktop app"/>
 		    <div className={styles.bottomGap}></div>
 			<div className={styles.projects}>
-				<h1>Watercolor Simulation Drawing App</h1>
+				<h1><a href="https://trangrei.github.io/final-project-artistic-rendering/index.html">Watercolor Simulation Drawing App</a></h1>
 			</div>
 			<Image
 		      	fileName="banner.png"

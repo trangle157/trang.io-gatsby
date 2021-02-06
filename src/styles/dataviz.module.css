@@ -1,10 +1,9 @@
 .container {
 	display: flex;
 	flex-direction: column;
-	padding: 0 2.5vh;
+	padding: 0 2.5vh 4vh 2.5vh;
 }
 
-.chordDiagram {
-	
+.icon {
+	width: 4vh;
 }
-

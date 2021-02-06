@@ -65,10 +65,10 @@ export default ({ data }) => {
               This is Trang.<br/>I bring art to heal the world.
           </h1>
           <div className={styles.socialMediaBar}>
-            <img className={styles.icon} src="assets/imgs/icons/dribbble.svg"/>
-            <img className={styles.icon} src="assets/imgs/icons/linkedin.svg"/>
-            <img className={styles.icon} src="assets/imgs/icons/github.svg"/>
-            <img className={styles.icon} src="assets/imgs/icons/email.svg"/>
+            <a href="https://dribbble.com/trangrei"><img className={styles.icon} src="assets/imgs/icons/dribbble.svg"/></a>
+            <a href="https://www.linkedin.com/in/trangrei/"><img className={styles.icon} src="assets/imgs/icons/linkedin.svg"/></a>
+            <a href="https://github.com/trangrei"><img className={styles.icon} src="assets/imgs/icons/github.svg"/></a>
+            {/*<img className={styles.icon} src="assets/imgs/icons/email.svg"/>*/}
           </div>
         </div>
       </div>

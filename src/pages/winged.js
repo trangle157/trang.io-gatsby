@@ -13,7 +13,7 @@ export default ({data}) => {
 					<h2>Solo project</h2>
 					<h2>Roles performed:</h2>
 					<ul>
-						<li>User researcher</li>
+						<li>User experience researcher</li>
 						<li>User interface designer</li>
 					</ul>
 					<h2>Tools used</h2>

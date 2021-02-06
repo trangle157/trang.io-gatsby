@@ -76,6 +76,10 @@ a:hover {
 	.tinyText {
 		font-size: 15px;
 	}
+
+	h3 {
+		font-size: 21px;
+	}
 }
 
 @media all and (min-width: 1024px) and (max-width: 1439px) {
@@ -85,6 +89,10 @@ a:hover {
 
 	body {
 		font-size: 23px;
+	}
+
+	h3 {
+		font-size: 24px;
 	}
 
 	.tinyText {
@@ -103,6 +111,10 @@ a:hover {
 
 	.tinyText {
 		font-size: 17px;
+	}
+
+	h3 {
+		font-size: 21px;
 	}
 }
 	

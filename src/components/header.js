@@ -10,7 +10,8 @@ export default function Header() {
 	        <div className={styles.pages}>
 	          <body><Link to="/about" className={styles.linkStyle}>About</Link></body>
 	          <body><Link to="/projects" className={styles.linkStyle}>Projects</Link></body>
-	          <body><Link to="/resume" className={styles.linkStyle}>Resume</Link></body>
+	          <body><a href="https://drive.google.com/file/d/1kDWkkB_wTx5RI3KNgdPF5PlwJOrUzYr1/view?usp=sharing">Resume</a></body>
+	          {/*<body><Link to="/resume" className={styles.linkStyle}>Resume</Link></body>*/}
 	        </div>
 	    </div>
     )
