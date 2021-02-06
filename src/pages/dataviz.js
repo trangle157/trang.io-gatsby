@@ -12,7 +12,7 @@ export default ({data}) => {
 		<Layout>
 			<div className={styles.container}>
 				<h1>CPU/GPU Data Visualization (ongoing project)</h1>
-					<body><a href="https://github.com/trangrei/DataViz-Proj"><u>Project Github link</u></a></body>
+					<body><a href="https://github.com/trangrei/DataViz-Proj"><u>Project GitHub link</u></a></body>
 					<body>Building a PC is all fun and games until we realize there is bottleneck 😎</body>
 					<h2>Solo project</h2>
 					<h2>Roles performed:</h2>
