@@ -2,8 +2,6 @@ import React from "react"
 import styles from "../styles/dataviz.module.css"
 import Layout from "../components/layout"
 import Image from "../components/image.js"
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import scatterplot from '../../public/assets/imgs/scatterplot.gif'
 import treemap from '../../public/assets/imgs/treemap.gif'
 
@@ -61,7 +59,7 @@ export default ({data}) => {
 				<h3>Scatterplot</h3>
 				<body>Ah, here comes the scatterplot, the first plot I ever learned to make in my Stats class. However, we don't want to just have a plot of <code>y = ax + b</code>, but a plot with two qualitative, categorical variables (CPU names and GPU names) and two quantitative, numeric variables (desktop rating and game rating). We only care about gaming rating as mentioned in the metrics section, but well, the more variables, the more fun we have.</body>
 				<Image 
-			      	fileName="scatterplot.jpg"
+			      	fileName="scatterplot.png"
 			      	alt="A screen of a desktop app"
 			    />
 			    <div class="tinyText">Scatterplot of PC's desktop and gaming rating plotting against CPU and GPU combinations (created in Tableau)</div>

@@ -2,7 +2,6 @@ import React from "react"
 import styles from "../styles/about.module.css"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
-import Image from "../components/image.js"
 
 export default function About() {
 	return (
@@ -21,7 +20,6 @@ export default function About() {
 						<body>Design-wise, I am comfortable with Figma, Sketch and XD.</body>
 						<body>In my free time, you'd see me sketching down portraits, writing my comic book ideas, and doing yoga. If you have time, I'd love to walk you around my <a href="https://purplecrab.tumblr.com/"><u>tumblr.</u></a></body>
 				</div>
-				<Image style={{width: "80vw"}, {"align-self": "center"}} fileName="Trang-Instagram.jpg" alt="my instagram photo"/>
 			</div>
 		</Layout>
 	)
