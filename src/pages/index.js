@@ -40,7 +40,7 @@ export default ({ data }) => {
   const sources = [
     {
       ...data.mobileImage.childImageSharp.fluid,
-      media: `(max-width: 600px)`
+      media: `(max-width: 414px)`
     },
     {
       ...data.tabletImage.childImageSharp.fluid,
@@ -55,10 +55,10 @@ export default ({ data }) => {
     <Layout>
       <div className = {styles.container}>
         <Img 
-          className = {styles.coverPhoto}
+            className = {styles.coverPhoto}
             fluid={sources}
             style={{"position": "relative"}}
-            object-fit = "none"
+            object-fit = "contain"
             alt="A drawing of a girl"/>
         <div className = {styles.topChunk}>
           <h1 className={styles.introText}>

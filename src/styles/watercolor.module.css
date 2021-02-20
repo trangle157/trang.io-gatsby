@@ -7,16 +7,13 @@
 	overflow-x: hidden;
 }
 
-
 @media all and (min-width: 991px) {
 }
-
 .icon {
 	width: 4vh;
 }
 
-
-@media all and (min-width: 1024px) {
+@media all and (min-width: 991px) {
 	.container {
 		margin: auto 14vw;
 	}

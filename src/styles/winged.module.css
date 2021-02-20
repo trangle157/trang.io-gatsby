@@ -1,22 +1,29 @@
 .container {
 	display: flex;
-	flex-direction: row;
-	padding: 0 2.5vh 4vh 2.5vh;
-	text-align: left;
-}
-
-.mainContent {
-	width: 100%;
-	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	padding: 0 0 4vh;
+	margin: auto 10vw;
+	overflow-x: hidden;
 }
 
-ol {
-	padding-left: 5vh;
+
+@media all and (min-width: 991px) {
 }
 
-ul {
-	padding-left: 5vh;
-	margin:0px;
+.icon {
+	width: 4vh;
+}
+
+
+@media all and (min-width: 1024px) {
+	.container {
+		margin: auto 14vw;
+	}
+}
+
+@media all and (min-width: 1100px) {
+	.container{
+		margin: auto 20vw;
+	}
 }

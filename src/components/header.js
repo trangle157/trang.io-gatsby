@@ -8,10 +8,10 @@ export default function Header() {
 		<div className={styles.header}>
 	        <div className={styles.initials}><Link to="/" className={styles.linkStyle}>TRL</Link></div>
 	        <div className={styles.pages}>
-	          <body><Link to="/about" className={styles.linkStyle}>About</Link></body>
-	          <body><Link to="/projects" className={styles.linkStyle}>Projects</Link></body>
-	          <body><a href="https://drive.google.com/file/d/1DZ2nI14a6NPrv-8pAxArlQJ_PPHnyl41/view?usp=sharing">Resume</a></body>
-	          {/*<body><Link to="/resume" className={styles.linkStyle}>Resume</Link></body>*/}
+	          <p><Link to="/about" className={styles.linkStyle}>About</Link></p>
+	          <p><Link to="/projects" className={styles.linkStyle}>Projects</Link></p>
+	          <p><a href="https://drive.google.com/file/d/1DZ2nI14a6NPrv-8pAxArlQJ_PPHnyl41/view?usp=sharing">Resume</a></p>
+	          {/*<p><Link to="/resume" className={styles.linkStyle}>Resume</Link></p>*/}
 	        </div>
 	    </div>
     )

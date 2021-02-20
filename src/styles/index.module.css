@@ -3,8 +3,6 @@
 	flex-direction: column-reverse;
 	width: 100vw;
 	overflow-x: hidden;
-	overflow-y: scroll;
-	padding: 0 2.5vh 4vh 2.5vh;
 }
 
 h1 {
@@ -17,7 +15,7 @@ h1 {
 }
 
 .coverPhoto {
-	top: -4vh;
+	
 }
 
 .topChunk {
@@ -39,12 +37,10 @@ h1 {
 	width: 38px;
 }
 
+/*
+if tablet and phone has a son or daughter
+*/
 @media all and (min-width: 601px) and (max-width: 991px) {
-	.container {
-		display: flex;
-		flex-direction: column-reverse;
-	}
-
 	.coverPhoto {
 		top: 0vh;
 	}
@@ -77,6 +73,8 @@ h1 {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		margin-left: 10vw;
+		padding-bottom: 2vw;
 	}
 }
 
