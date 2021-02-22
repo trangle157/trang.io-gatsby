@@ -11,20 +11,20 @@ export default ({data}) => {
 	return (
 		<Layout>
 			<div className={styles.projects}>
-				<h1><Link to="/dataviz" className={styles.linkStyle}>CPU/GPU Data Visualization</Link></h1>
+				<Link to="/dataviz" className={styles.linkStyle}><h1>CPU/GPU Data Visualization</h1></Link>
 			<Image 
 		      	fileName="heatmap.png"
 		      	alt="A heatmap or matrix of CPU and GPU brand names"/>
 		  	<div className={styles.bottomGap}></div>
 			<div className={styles.projects}>
-				<h1><Link to="/winged" className={styles.linkStyle}>Drawing App for the Disabled</Link></h1>
+				<Link to="/winged" className={styles.linkStyle}><h1>Drawing App for the Disabled</h1></Link>
 			</div>
 			<Image 
 		      	fileName="test-screen.png"
 		      	alt="A screen of a desktop app"/>
 		    <div className={styles.bottomGap}></div>
 			<div className={styles.projects}>
-				<h1><Link to="/watercolor" className={styles.linkStyle}>Watercolor Simulation Drawing App</Link></h1>
+				<Link to="/watercolor" className={styles.linkStyle}><h1>Watercolor Simulation Drawing App</h1></Link>
 			</div>
 			<Image
 		      	fileName="banner.png"

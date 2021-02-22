@@ -17,24 +17,28 @@
 	line-height: auto;
 	position: absolute;
 	left: 10vw;
-	top: calc(2vh + 13%);
+	top: calc(2vh + 5%);
 	font-size: 15px;
-}
-
-@media all and (max-width: 415px) {
 }
 
 @media all and (min-width: 416px) {
 	.initials > a {
-		top: calc(2vh + 18%);
+		top: calc(2vh + 11%);
 		font-size: 20px;
 	}
 }
 
 @media all and (min-width: 769px) and (max-width: 1439px) {
 	.initials > a {
-		top: calc(2vh + 20%);
+		top: calc(2vh + 14%);
 		font-size: 23px;
+	}
+}
+
+@media all and (min-width: 1440px) {
+	.initials > a {
+		top: calc(2vh + 17%);
+		font-size: 25px;
 	}
 }
 
@@ -56,6 +60,24 @@
 	}
 }
 
+/*
+Cut out for desktop
+*/
+@media all and (min-width: 992px) {
+	.header {
+		justify-content: left;
+		margin: auto 10vw;
+	}
+
+	.pages {
+		margin-left: 100px;
+	}
+
+	.initials > a {
+		left: inherit;
+	}
+}
+
 @media all and (min-width: 1024px) and (max-width: 1439px) {
 	.pages {
 		width: 40%;
@@ -64,7 +86,7 @@
 
 @media all and (min-width: 1440px) {
 	.pages {
-		width: 30%;
+		width: 40%;
 	}
 }
 
@@ -79,35 +101,4 @@
 
 .linkStyle:hover {
 	color: #9E71B2;
-}
-
-/*
-Cut out for desktop
-*/
-@media all and (min-width: 991px) {
-	.header {
-		justify-content: left;
-		margin: auto 10vw;
-	}
-
-	.pages {
-		margin-left: 100px;
-	}
-
-	.initials > a {
-		left: inherit;
-		font-size: 23px;
-	}
-}
-
-@media all and (min-width: 991px) {
-	.header{
-		margin: auto 14vw;
-	}
-}
-
-@media all and (min-width: 1100px) {
-	.header{
-		margin: auto 20vw;
-	}
 }

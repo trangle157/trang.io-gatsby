@@ -1,10 +1,10 @@
 figure {
-	width: 90vw;
+	width: 70vw;
 	align-self: center;
 }
 
 @media all and (min-width: 1024px) {
 	figure {
-		width: 70vw;
+		width: 60vw;
 	}
 }

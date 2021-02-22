@@ -74,15 +74,15 @@ if tablet and phone has a son or daughter
 		flex-direction: column;
 		align-items: flex-start;
 		margin-left: 10vw;
-		padding-bottom: 2vw;
+		padding: 4vh 0 4vh;
+		margin: auto 10vw;
+		overflow-x: hidden;
 	}
 }
 
 @media all and (min-width: 992px) and (max-width: 1023px) {
 	.container {
 		display: block;
-		width: 100vw;
-		height: 100vh;
 		text-align: left;
 	}
 
