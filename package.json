@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trangreyle/trang.io.git"
+    "url": "git+https://github.com/trangrei/trang.io.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Trang Le",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/trangreyle/trang.io/issues"
+    "url": "https://github.com/trangrei/trang.io/issues"
   },
-  "homepage": "https://github.com/trangreyle/trang.io#readme",
+  "homepage": "https://github.com/trangrei/trang.io#readme",
   "dependencies": {
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",

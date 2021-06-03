@@ -5,7 +5,7 @@ import Footer from "./footer.js"
 
 export default function Layout({children}) {
 	return (
-		<div style={{margin: `0 0`, padding: `0 0`, "overflow-x": `hidden`}}>
+		<div style={{margin: `0 0`, padding: `0 0`}}>
 		    <Header/>
 			{children}
 			<Footer/>

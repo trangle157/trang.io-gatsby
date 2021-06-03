@@ -1,0 +1,8 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 0 4vh;
+	margin: auto 10vw;
+	overflow-x: hidden;
+}

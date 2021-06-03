@@ -231,8 +231,11 @@ export default ({ data }) => {
 					Siri's usage.
 				</p>
 				<Image fileName="voice-command.png" style={{ width: '100%' }} alt="drawing with voice command" />
+				<h1 style={{color: '#DB7171'}}>The interface is good. Are we good to go? Not really.</h1>
 				<h2>4. Suitable wheelchair setup to minimize users' movements</h2>
 				<p>
+					To adapt to different users' ergonomic conditions, we need to think about a setup that is adjustable for different disabilities.
+					<Image fileName="touch-wheelchair.png" style={{width: '100%'}} alt="device setup screen"/>
 					I asked one user (who has no disabilities) that "how would you go about using a drawing app if your
 					right arm is injured by rockclimbing?" (she loves rockclimbing and is righthanded). "I would use my
 					left arm to move the paper around and my right arm to draw, so my injured arm does not have to move
@@ -242,6 +245,8 @@ export default ({ data }) => {
 					This answer inspired the fourth solution, which is{' '}
 					<b>setting up the leap motion controller on a wheelchair at a suitable location</b>.
 				</p>
+				<Image fileName="wheelchair-arm.png" style={{width: '100%'}} alt="device setup screen"/>	
+				<Image fileName="finger-controller-move.png" style={{width: '100%'}} alt="device setup screen"/>
 				<p>
 					While playing around with the leap motion controller, I realized that as I moved my controller
 					around with one hand and keep the detected hand still, the detected hand would be moving around on
@@ -257,11 +262,35 @@ export default ({ data }) => {
 					Users with{' '}
 					<a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/arthrogryposis">
 						<u>arthrogryposis</u>
-					</a>, for example, would have limited arm range movement. <b>"Moving around the canvas"</b> is a
+					</a>, for example, would have limited arm range movement. <b>"Moving the canvas around instead of the hands"</b> is a
 					potential solution for this group of users, and I believe it can benefit users with other conditions
 					and illnesses.
 				</p>
+				<p>
+					Luckily, Winged also took into account that users might need to be oriented with this setup when they started using the app.
+				</p>
+				<div class="tinyText">Six steps to detect users' hand structures</div>					
+				<Image fileName="six-step-setup.png" style={{width: '100%'}} alt="device setup screen"/>
+				<br/><br/>
+				<div class="tinyText">Our recommended setup after detecting users' hand structures</div>
+				<Image fileName="recommended-setup.png" style={{width: '100%'}} alt="device setup screen"/>
+				<p>Here is Winged's approach together with approaches that have been done by various engineers in this effort!</p>
+				<br/>
+				<div class="tinyText">Winged's approach (top), other approaches from leap motion gallery (bottom) </div>
 				<Image fileName="wheelchair.png" style={{ width: '100%' }} alt="wheelchair setup" />
+				<h1>Hardware constraints</h1>
+				<p>Shout out to the brilliant hardware engineers who have worked on hover gesture technologies. I would like to be mindful of my design's feasibility with hardware capability, and have noted some constraints:</p>
+				<br/>
+				<div class="tinyText">Field of View and depth of view illustration for leap motion controller. <a href="https://www.researchgate.net/figure/Hardware-left-and-the-field-of-view-right-of-the-Leap-Motion-Sensor-pictures_fig3_339891094">Source: ResearchGate</a></div>
+				<Image fileName="fov.png" style={{ width: '100%' }} alt="wheelchair setup"/>
+				<ul>
+					<li>
+						There is a constraint to the field of view (FoV) of the leap motion device. Currently, the FoV of the device is typically 150×120°.
+					</li>
+					<li>
+						The constraint for the depth (vertical interaction) is between 10cm to 60cm preferred, up to 80cm maximum
+					</li>
+				</ul>
 				<h1>Summary - Takeaways</h1>
 				<p>
 					One of the main challenges of the app is to <b>adapt to different disabilities</b> to increase
