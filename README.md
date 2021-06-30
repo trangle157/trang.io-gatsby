@@ -4,7 +4,7 @@ Trang's baddabing baddaboom website
 Hi! Thanks for visiting my GitHub repo and first website. To run this website, please clone the repository:
 
 ```
-https://github.com/trangrei/trang.io.git
+git clone https://github.com/trangrei/trang.io.git
 ```
 
 Afterwards, installing the necessary npm packages by running
